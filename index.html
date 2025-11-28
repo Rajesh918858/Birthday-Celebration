@@ -1,0 +1,127 @@
+<!DOCTYPE html>     
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Satish! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <canvas id="confetti"></canvas>
+
+    <div class="music-control" id="musicBtn">
+        <i class="fas fa-play"></i> <span>Play Music</span>
+    </div>
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="hero">
+        <div class="overlay"></div>
+
+        <div class="content">
+            <h1 id="typewriter"></h1>
+            <p>Wishing you a day filled with joy, laughter, and unforgettable memories.</p>
+            <button class="btn" id="surpriseBtn">🎁 Unwrap Surprise</button>
+        </div>
+
+        <div class="balloon b1"></div>
+        <div class="balloon b2"></div>
+        <div class="balloon b3"></div>
+        <div class="balloon b4"></div>
+        <div class="balloon b5"></div>
+    </section>
+
+    <section class="about" id="about-section">
+        <div class="about-container">
+            <div class="about-img">
+                <div class="img-glow"></div>
+                <img src="satish pic.jpg" alt="Satish Photo">
+            </div>
+
+            <div class="about-content">
+                <h2 class="section-title">Who is Satish?</h2>
+
+                <p class="intro glass-text">
+                    Satish is my <strong>best friend</strong> — always by my side. He supports me through every challenge and lifts me up in tough times. His presence gives me strength and confidence every day.
+                </p>
+
+                <p class="wish glass-text">
+                    Currently pursuing <strong>B.Sc Computer Science</strong>, he is working tirelessly for a bright future in tech. 
+                    <br><br>
+                    May all his ambitions in coding, technology, and life come true — you deserve the very best!
+                </p>
+
+                <h3>Hobbies</h3>
+                <ul class="hobby-list">
+                    <li><i class="fas fa-cricket"></i> Cricket</li>
+                    <li><i class="fas fa-microphone"></i> Singing</li>
+                    <li><i class="fas fa-music"></i> Dancing</li>
+                    <li><i class="fas fa-laptop-code"></i> Coding</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h2 class="section-title">Memory Lane 📸</h2>
+        
+        <div class="glass-frame">
+            <button class="slider-nav-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <div class="slide-view">
+                <img id="galleryImage" src="satish1.jpg" alt="Memory">
+            </div>
+            <button class="slider-nav-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <p class="gallery-caption">Click arrows to see more memories!</p>
+    </section>
+
+    <section class="wishes-section">
+        <h2 class="section-title">Birthday Wishes 💌</h2>
+
+        <div class="wishes-container">
+            <div class="wish-card glass-card">
+                <div class="quote-icon">“</div>
+                <p class="wish-msg">
+                    Happy Birthday Satish! 🎂 You are one of the strongest and kindest people I know. Keep shining brother!
+                </p>
+                <h4 class="wish-by"><img src="https://ui-avatars.com/api/?name=Rajesh&background=ff3399&color=fff" class="avatar"> Rajesh</h4>
+            </div>
+
+            <div class="wish-card glass-card">
+                <div class="quote-icon">“</div>
+                <p class="wish-msg">
+                   May your coding skills grow, your projects get bigger, and your dreams take flight. Proud of you! 🚀
+                </p>
+                <h4 class="wish-by"><img src="https://ui-avatars.com/api/?name=Friends&background=33ccff&color=fff" class="avatar"> College Friends</h4>
+            </div>
+
+            <div class="wish-card glass-card">
+                <div class="quote-icon">“</div>
+                <p class="wish-msg">
+                    Wishing you a birthday full of happiness, positivity, and new achievements. Keep pushing forward champ! 💫
+                </p>
+                <h4 class="wish-by"><img src="https://ui-avatars.com/api/?name=Family&background=ffcc00&color=fff" class="avatar"> Family</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="message-section">
+        <h2 class="section-title">Send a Wish! ✍️</h2>
+        <div class="form-container glass-card">
+            <input type="text" placeholder="Your Name" id="senderName">
+            <textarea placeholder="Write a sweet message for Satish..." id="senderMsg"></textarea>
+            <button class="btn-send" onclick="sendMessage()">Send Wish 🚀</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Made with ❤️ by Rajesh | © 2025</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="slider.js" defer></script>
+</body>
+</html>

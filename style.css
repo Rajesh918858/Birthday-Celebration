@@ -1,0 +1,372 @@
+/* --- Global Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #050505;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* --- Scrollbar Customization --- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #111;
+}
+::-webkit-scrollbar-thumb {
+    background: #ff0077;
+    border-radius: 5px;
+}
+
+/* --- Confetti Canvas --- */
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    background: radial-gradient(circle at center, #1a0b14 0%, #000000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    z-index: 10;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    min-height: 80px; /* Prevents layout shift during typewriter */
+}
+
+.btn {
+    padding: 15px 35px;
+    background: linear-gradient(45deg, #ff0077, #ff99cc);
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 0, 119, 0.5);
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 0 40px rgba(255, 0, 119, 0.8);
+}
+
+/* --- Balloons --- */
+.balloon {
+    width: 50px;
+    height: 70px;
+    background: #ff4dc4;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: float 10s infinite ease-in-out;
+    opacity: 0.7;
+}
+.b1 { left: 15%; animation-duration: 8s; background: #ff3399; }
+.b2 { left: 35%; animation-duration: 12s; background: #33ccff; }
+.b3 { left: 65%; animation-duration: 10s; background: #ffcc00; }
+.b4 { left: 85%; animation-duration: 15s; background: #9933ff; }
+
+@keyframes float {
+    0% { bottom: -100px; transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { bottom: 110vh; transform: translateX(-20px); }
+}
+
+/* --- Music Button --- */
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+.music-control:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- About Section & Glassmorphism --- */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff66cc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about {
+    padding: 80px 20px;
+    background: #0a0a0a;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-img {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.about-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    z-index: 2;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.img-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, #ff0077, #33ccff);
+    filter: blur(50px);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.glass-text {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* --- Hobby List --- */
+.hobby-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hobby-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.hobby-list li:hover {
+    background: #ff0077;
+    transform: translateY(-5px);
+}
+
+/* --- Gallery & Glass Frame --- */
+.gallery-section {
+    padding: 80px 20px;
+    background: #0f0f0f;
+    text-align: center;
+}
+
+.glass-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slide-view img {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.slider-nav-btn {
+    background: none;
+    border: none;
+    color: #ff3399;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+
+.slider-nav-btn:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* --- Wishes Cards (Glassmorphism) --- */
+.wishes-section {
+    padding: 80px 20px;
+    background: #0a0a0a;
+}
+
+.wishes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: left;
+    position: relative;
+    transition: 0.3s;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ff0077;
+}
+
+.quote-icon {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.wish-msg {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.wish-by {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    color: #ff66cc;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* --- Message Form --- */
+.message-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(to top, #000, #0a0a0a);
+}
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px;
+}
+
+input, textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    font-family: inherit;
+    box-sizing: border-box; 
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ff0077;
+}
+
+.btn-send {
+    background: #ff0077;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-send:hover {
+    background: #ff3399;
+}
+
+/* --- Footer --- */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: black;
+    color: #555;
+    font-size: 0.9rem;
+}
